@@ -100,6 +100,31 @@
   display: block;
   border-radius: 4px;
 }
+  .prodotto {
+  cursor: pointer;
+}
+
+.listino {
+  display: none;
+  margin-top: 30px;
+  padding: 20px;
+  background: #111;
+  border: 1px solid #333;
+}
+
+.listino img {
+  width: 100%;
+  max-width: 260px;
+  margin: 10px auto;
+  display: block;
+}
+
+.prezzo {
+  font-size: 1.1em;
+  margin: 8px 0;
+  color: #c9a24d;
+}
+
   </style>
 </head>
 
@@ -145,12 +170,19 @@
 <section class="catalogo">
   <h2 class="gold">Collezione</h2>
 
-  <div class="prodotto">
-    <h3>Luminia Aura</h3>
-    <p>Lampada artigianale con giochi di luce, nata da bottiglie iconiche.</p>
-    <img src="aura-1.jpeg" alt="Luminia Aura lampada">
-    <img src="aura-2.jpeg" alt="Luminia Aura lampada">
+ <div class="prodotto" onclick="toggleListino('aura')">
+  <h3>Luminia Aura</h3>
+  <p>Lampada artigianale con giochi di luce, nata da bottiglie iconiche.</p>
+
+  <div id="aura" class="listino">
+    <img src="aura-1.jpeg">
+    <p class="prezzo">Lampada Aura – €89</p>
+
+    <img src="aura-2.jpeg">
+    <p class="prezzo">Lampada Aura Premium – €109</p>
   </div>
+</div>
+
 
   <div class="prodotto">
     <h3>Luminia Essenza</h3>
