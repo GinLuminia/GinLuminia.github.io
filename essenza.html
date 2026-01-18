@@ -256,6 +256,54 @@ function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
 }
 </script>
+  <script>
+let currentIndex = 0;
+let images = [];
+
+function openLightbox(src) {
+  const allImgs = document.querySelectorAll('.card img');
+  images = Array.from(allImgs).map(img => img.src);
+  currentIndex = images.indexOf(src);
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  lightboxImg.src = images[currentIndex];
+  lightbox.style.display = 'flex';
+}
+
+// chiusura cliccando fuori
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+
+// swipe touch per mobile
+let startX = 0;
+
+const lightbox = document.getElementById('lightbox');
+lightbox.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+
+lightbox.addEventListener('touchend', e => {
+  let endX = e.changedTouches[0].clientX;
+  if(endX - startX > 50){  // swipe a destra
+    showPrev();
+  } else if(startX - endX > 50){ // swipe a sinistra
+    showNext();
+  }
+});
+
+function showNext() {
+  currentIndex = (currentIndex + 1) % images.length;
+  document.getElementById('lightbox-img').src = images[currentIndex];
+}
+
+function showPrev() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  document.getElementById('lightbox-img').src = images[currentIndex];
+}
+</script>
+
 <p class="prezzi-note">Prezzi indicativi</p>
 
 </body>
