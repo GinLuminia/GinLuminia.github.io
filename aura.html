@@ -96,21 +96,7 @@
   color: #ffffff;
   margin-top: 4px;
 }
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.9);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
 
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
- object-fit: contain
-}
 
   </style>
 </head>
@@ -126,78 +112,91 @@ Lampade artigianali con giochi di luce, nate da bottiglie iconiche.
 <div class="grid">
 
   <div class="card">
-    <img src="aura-1.jpeg" alt="Luminia Aura 1" onclick="openLightbox(this.src)">
+    <img src="aura-1.jpeg" alt="Luminia Aura 1">
     <h3>Portofino</h3>
     <div class="prezzo">€20</div>
   </div>
 
   <div class="card">
-    <img src="aura-2.jpeg" alt="Luminia Aura 2" onclick="openLightbox(this.src)">
+    <img src="aura-2.jpeg" alt="Luminia Aura 2">
     <h3>Beefeater 24</h3>
     <div class="prezzo">€12</div>
     
   </div>
    <div class="card">
-    <img src="aura-3.jpg" alt="Luminia Aura 3" onclick="openLightbox(this.src)">
+    <img src="aura-3.jpg" alt="Luminia Aura 3">
      <h3>Malfy pompelmo</h3>
     <div class="prezzo">€10</div>
   </div>
 
   <div class="card">
-    <img src="aura-4.jpg" alt="Luminia Aura 4" onclick="openLightbox(this.src)">
+    <img src="aura-4.jpg" alt="Luminia Aura 4" >
     <h3>Bombay</h3>
     <div class="prezzo">€12</div>
   </div>
 
    <div class="card">
-    <img src="aura-5.jpg" alt="Luminia Aura 5" onclick="openLightbox(this.src)">
+    <img src="aura-5.jpg" alt="Luminia Aura 5" >
      <h3>Apenera</h3>
     <div class="prezzo">€15</div>
   </div>
 
   <div class="card">
-    <img src="aura-6.jpg" alt="Luminia Aura 6" onclick="openLightbox(this.src)">
+    <img src="aura-6.jpg" alt="Luminia Aura 6" >
     <h3>Tanqueray</h3>
     <div class="prezzo">€10</div>
   </div>
 
    <div class="card">
-    <img src="aura-7.jpg" alt="Luminia Aura 7" onclick="openLightbox(this.src)">
+    <img src="aura-7.jpg" alt="Luminia Aura 7">
      <h3>Lonewolf</h3>
     <div class="prezzo">€12</div>
   </div>
 
   <div class="card">
-    <img src="aura-8.jpg" alt="Luminia Aura 8" onclick="openLightbox(this.src)">
+    <img src="aura-8.jpg" alt="Luminia Aura 8" >
     <h3>Professore Crocodile</h3>
     <div class="prezzo">€15</div>
   </div>
 
    <div class="card">
-    <img src="aura-9.jpg" alt="Luminia Aura 9" onclick="openLightbox(this.src)">
+    <img src="aura-9.jpg" alt="Luminia Aura 9" >
      <h3>Whitley Neil</h3>
     <div class="prezzo">€10</div>
   </div>
 
   <div class="card">
-    <img src="aura-10.jpg" alt="Luminia Aura 10" onclick="openLightbox(this.src)">
+    <img src="aura-10.jpg" alt="Luminia Aura 10" >
     <h3>Mare Capri</h3>
     <div class="prezzo">€15</div>
   </div>
 
    <div class="card">
-    <img src="aura-11.jpg" alt="Luminia Aura 11" onclick="openLightbox(this.src)">
+    <img src="aura-11.jpg" alt="Luminia Aura 11" >
      <h3>Professore Gentlemen</h3>
     <div class="prezzo">€15</div>
   </div>
 
-  
+  .gallery {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery img {
+  flex: 0 0 auto;
+  width: 220px;
+  border-radius: 10px;
+  scroll-snap-align: start;
+}
+
 </div>
 
-<a href="index.html" class="back">← Torna alla collezione</a>
+
   
-<div id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
+
 </div>
 <script>
 function openLightbox(src) {
