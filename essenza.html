@@ -2,146 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Luminia Essenza – Gin Luminia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background-color: #0f0f0f;
-      color: #f5f5f5;
-    }
-    .prezzi-note {
-  text-align: center;
-  margin: 40px 0 20px;
-  font-size: 0.85rem;
-  color: #999;
-  letter-spacing: 0.5px;
-}
-
-
-    h1 {
-      text-align: center;
-      margin: 40px 0 10px;
-      color: #c9a24d;
-      letter-spacing: 2px;
-    }
-
-    p.intro {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 40px;
-      font-size: 0.95rem;
-      opacity: 0.85;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      padding: 0 20px 60px;
-      max-width: 1100px;
-      margin: auto;
-    }
-      .card {
-  text-align: center;
-}
-
-   .card img {
-  width: 100%;
-  max-height: 320px;
-  object-fit: contain;
-  cursor: zoom-in;
-  transition: transform 0.3s ease;
-}
-
-.card img:hover {
-  transform: scale(1.03);
-}
-
-    }
-
-
-.card h3 {
-  margin-top: 15px;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-}
-
-.prezzo {
-  margin-top: 6px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #c9a24d;
-}
-
-    }
-
-    a.back {
-      display: block;
-      text-align: center;
-      margin: 40px 0;
-      color: #c9a24d;
-      text-decoration: none;
-    }
-    .product {
-  text-align: center;
-}
-
-.product img {
-  width: 220px;        /* dimensione foto (puoi ridurla se vuoi) */
-  height: auto;
-  border-radius: 6px;
-  display: block;
-  margin: 0 auto;
-}
-
-.product h3 {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #f2d58a;      /* oro chiaro */
-  letter-spacing: 0.5px;
-}
-
-.product .price {
-  font-size: 20px;
-  font-weight: bold;
-  color: #ffffff;
-  margin-top: 4px;
-   }
-  
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.9);
-  justify-content: center;
-  align-items: center;
-  z-index: 99999;
-}
-
-.lightbox img {
-  max-width: 90vw;
-  max-height: 90vh;
-  cursor: zoom-out;
-}
-
-  }
-  </style>
-</head>
-
-<body>
-
-<h1>Luminia Essenza</h1>
-
-<p class="intro">
-Profumatori artigianali con profumo inlcuso a scelta tra "rosa e muschio" e "mushio bianco", da bottiglia a elemento d'arredo per la tua casa.
-</p>
-
-<div class="grid">
-
-  <div class="card">
+  <title>Luminia Essenza – Gin Luminia <div class="card">
     <img src="essenza-1.jpeg" alt="Luminia Essenza 1" onclick="openLightbox(this.src)">
     <h3>Portofino</h3>
     <div class="prezzo">€15</div>
@@ -235,16 +96,204 @@ Profumatori artigianali con profumo inlcuso a scelta tra "rosa e muschio" e "mus
     <img src="essenza-16.jpg" alt="Luminia Essenza 11" onclick="openLightbox(this.src)">
      <h3>Cubical Kiss</h3>
     <div class="prezzo">€8</div>
-  </div>
-  
-</div>
+</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<a href="index.html" class="back">← Torna alla collezione</a>
-  
-<div id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
-</div>
-  
+  <style>
+  body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #0f0f0f;
+  color: #f5f5f5;
+}
+
+h1 {
+  text-align: center;
+  margin: 40px 0 10px;
+  color: #c9a24d;
+  letter-spacing: 2px;
+}
+
+p.intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 0 20px 60px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.03);
+}
+
+.card h3 {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.prezzo {
+  margin-top: 8px;
+  color: #c9a24d;
+  font-weight: 600;
+}
+
+.prezzi-note {
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  cursor: zoom-out;
+}
+
+  </style>
+</head>
+
+<body>
+
+<h1>Luminia Aura</h1>
+
+<p class="intro">
+Lampade artigianali con giochi di luce, nate da bottiglie iconiche.
+</p>
+
+<div class="grid">
+
+<div class="card">
+    <img src="essenza-1.jpeg" alt="Luminia Essenza 1" onclick="openLightbox(this.src)">
+    <h3>Portofino</h3>
+    <div class="prezzo">€15</div>
+  </div>
+
+  <div class="card">
+    <img src="essenza-2.jpeg" alt="Luminia Essenza 2" onclick="openLightbox(this.src)">
+    <h3>Nordes</h3>
+    <div class="prezzo">€6</div>
+    
+  </div>
+   <div class="card">
+    <img src="essenza-3.jpg" alt="Luminia Essenza 3" onclick="openLightbox(this.src)">
+     <h3>GinB</h3>
+    <div class="prezzo">€8</div>
+  </div>
+
+  <div class="card">
+    <img src="essenza-4.jpg" alt="Luminia Essenza 4" onclick="openLightbox(this.src)">
+    <h3>Malfy Pompelmo</h3>
+    <div class="prezzo">€6</div>
+  </div>
+
+   <div class="card">
+    <img src="essenza-5.jpg" alt="Luminia Essenza 5" onclick="openLightbox(this.src)">
+     <h3>Monkey 47</h3>
+    <div class="prezzo">€10</div>
+  </div>
+
+  <div class="card">
+    <img src="essenza-6.jpg" alt="Luminia Essenza 6" onclick="openLightbox(this.src)">
+    <h3>Hendrick's Oasium</h3>
+    <div class="prezzo">€8</div>
+  </div>
+
+   <div class="card">
+    <img src="essenza-7.jpg" alt="Luminia Essenza 7" onclick="openLightbox(this.src)">
+     <h3>Sabatini Gin</h3>
+    <div class="prezzo">€8</div>
+  </div>
+
+  <div class="card">
+    <img src="essenza-8.jpg" alt="Luminia Essenza 8" onclick="openLightbox(this.src)">
+    <h3>GinGabry</h3>
+    <div class="prezzo">€8</div>
+  </div>
+
+   <div class="card">
+    <img src="essenza-9.jpg" alt="Luminia Essenza 9" onclick="openLightbox(this.src)">
+     <h3>Copper House</h3>
+    <div class="prezzo">€6</div>
+  </div>
+
+  <div class="card">
+    <img src="essenza-10.jpg" alt="Luminia Essenza 10" onclick="openLightbox(this.src)">
+    <h3>Malfy Limone</h3>
+    <div class="prezzo">€6</div>
+  </div>
+
+   <div class="card">
+    <img src="essenza-11.jpg" alt="Luminia Essenza 11" onclick="openLightbox(this.src)">
+     <h3>1592</h3>
+    <div class="prezzo">€8</div>
+  </div>
+
+   <div class="card">
+    <img src="essenza-12.jpg" alt="Luminia Essenza 11" onclick="openLightbox(this.src)">
+     <h3>Asolo</h3>
+    <div class="prezzo">€10</div>
+  </div>
+
+    <div class="card">
+    <img src="essenza-13.jpg" alt="Luminia Essenza 11" onclick="openLightbox(this.src)">
+     <h3>11</h3>
+    <div class="prezzo">€8</div>
+  </div>
+
+    <div class="card">
+    <img src="essenza-14.jpg" alt="Luminia Essenza 11" onclick="openLightbox(this.src)">
+     <h3>Formentera</h3>
+    <div class="prezzo">€6</div>
+  </div>
+
+    <div class="card">
+    <img src="essenza-15.jpg" alt="Luminia Essenza 11" onclick="openLightbox(this.src)">
+     <h3>The Italian Gin</h3>
+    <div class="prezzo">€8</div>
+  </div>
+
+    <div class="card">
+    <img src="essenza-16.jpg" alt="Luminia Essenza 11" onclick="openLightbox(this.src)">
+     <h3>Cubical Kiss</h3>
+    <div class="prezzo">€8</div>
+
+  </div>
+
+
+
+
 <script>
 function openLightbox(src) {
   const box = document.getElementById("lightbox");
@@ -257,7 +306,7 @@ function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
 }
 </script>
-  <script>
+<script>
 let currentIndex = 0;
 let images = [];
 
@@ -304,25 +353,16 @@ function showPrev() {
   document.getElementById('lightbox-img').src = images[currentIndex];
 }
 </script>
-
 <p class="prezzi-note">Prezzi indicativi</p>
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
+  <div id="lightbox" class="lightbox">
+  <img id="lightbox-img" alt="">
 </div>
 <script>
 function openLightbox(src) {
-  const lightbox = document.getElementById("lightbox");
+  const lb = document.getElementById("lightbox");
   const img = document.getElementById("lightbox-img");
 
   img.src = src;
-  lightbox.style.display = "flex";
-  document.body.style.overflow = "hidden"; // 🔒 BLOCCA SCROLL
-}
-
-function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
-  document.body.style.overflow = "auto"; // 🔓 RIABILITA SCROLL
-   img.src = src;
   lb.style.display = "flex";
   document.body.style.overflow = "hidden";
 }
@@ -333,7 +373,6 @@ document.getElementById("lightbox").addEventListener("click", function(e) {
     document.body.style.overflow = "auto";
   }
 });
-}
 </script>
 
 </body>
