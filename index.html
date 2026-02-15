@@ -167,14 +167,69 @@
 }
 
   </style>
+  .navbar {
+  position: sticky;
+  top: 0;
+  background-color: #0f0f0f;
+  z-index: 999;
+  border-bottom: 1px solid rgba(201,162,77,0.15);
+  padding: 15px 0 20px;
+}
+
+.nav-wrapper {
+  text-align: center;
+}
+
+.nav-title {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 6px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #c9a24d;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+.nav-sub {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
 </head>
 
 <body>
 <div class="navbar">
-  <a href="aura.html">Luminia Aura</a>
-  <a href="essenza.html">Luminia Essenza</a>
-  <a href="ritual.html">Luminia Ritual</a>
+  <div class="nav-wrapper">
+    <div class="nav-title">Collezioni</div>
+    <div class="nav-links">
+      <a href="aura.html">Luminia Aura</a>
+      <a href="essenza.html">Luminia Essenza</a>
+      <a href="ritual.html">Luminia Ritual</a>
+    </div>
+    <div class="nav-sub">
+      Scopri modelli, varianti e prezzi
+    </div>
+  </div>
 </div>
+
 
 <header>
   <div>
