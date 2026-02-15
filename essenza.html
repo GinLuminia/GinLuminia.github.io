@@ -130,26 +130,28 @@ Profumatori artigianali con essenze incluse, realizzati da bottiglie iconiche.
 <p class="prezzi-note">Prezzi indicativi</p>
 
 <!-- LIGHTBOX -->
-
-
-<script>
-  function openLightbox(src) {
-    const lb = document.getElementById("lightbox");
-    const img = document.getElementById("lightbox-img");
-
-    img.src = src;
-    lb.style.display = "flex";
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-    document.body.style.overflow = "auto";
-  }
-</script>
 <div id="lightbox" class="lightbox">
   <img id="lightbox-img" alt="">
 </div>
+
+<script>
+
+</script>
+<script>
+function openLightbox(src) {
+  const lb = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+
+  img.src = src;
+  lb.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+document.getElementById("lightbox").addEventListener("click", function() {
+  this.style.display = "none";
+  document.body.style.overflow = "auto";
+});
+</script>
 
 </body>
 </html>
